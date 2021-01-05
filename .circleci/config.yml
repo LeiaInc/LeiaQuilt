@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - python/load-cache
-      - pip install -e .
+      - run: pip3 install -e .
       - python/save-cache
       - run:
           command: leiaquilt example_input/view_0.jpg example_input/view_1.jpg
