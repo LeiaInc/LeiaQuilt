@@ -1,10 +1,11 @@
 import os
 
-import align
 import cv2
 import numpy as np
 import argparse
-import layouts
+
+from leiaquilt import align
+from leiaquilt import layouts
 
 
 def main():

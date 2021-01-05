@@ -61,28 +61,7 @@ setup(
     # above.
     author_email='author@example.com',  # Optional
 
-    # This field adds keywords for your project which will appear on the
-    # project page. What does your project relate to?
-    #
-    # Note that this is a list of additional keywords, separated
-    # by commas, to be used to assist searching for the distribution in a
-    # larger catalog.
-    keywords='sample, setuptools, development',  # Optional
-
-    # When your source code is in a subdirectory under the project root, e.g.
-    # `src/`, it is necessary to specify the `package_dir` argument.
-    package_dir={'': 'src'},  # Optional
-
-    # You can just specify package directories manually here if your project is
-    # simple. Or you can use find_packages().
-    #
-    # Alternatively, if you just want to distribute a single Python file, use
-    # the `py_modules` argument instead as follows, which will expect a file
-    # called `my_module.py` to exist:
-    #
-    #   py_modules=["my_module"],
-    #
-    packages=find_packages(where='src'),  # Required
+    packages=['leiaquilt'],
 
     python_requires='>=3.5, <4',
 
