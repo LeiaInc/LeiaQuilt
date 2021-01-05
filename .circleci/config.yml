@@ -8,7 +8,9 @@ jobs:
     executor: python/default
     steps:
       - checkout
+      - python/load-cache
       - run: pip3 install -e .
+      - python/save-cache
       - run:
           command: leiaquilt example_input/view_0.jpg example_input/view_1.jpg
           name: Create 2x1 image
