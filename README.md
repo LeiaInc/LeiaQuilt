@@ -21,3 +21,17 @@ leiaquilt example_input/view_0.jpg example_input/view_1.jpg example_input/view_2
 ```
 
 ![2x2](docs/out_2x2.jpg)
+
+## Advanced
+
+Views captured by real cameras may not be well aligned.
+
+As an example, this content was captured off of a moving ship.
+You can observe horizontal motion, as well as a small amount of vertical motion.
+
+![unaligned](docs/unaligned.gif)
+
+In order to get a high-quality Lightfield image, it's important to correct for this.
+By default, `leiaquilt` uses feature-matching to align the images:
+
+![aligned](docs/aligned.gif)
