@@ -1,0 +1,27 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@0.2.1
+
+jobs:
+  build-and-test:
+    executor: python/default
+    steps:
+      - checkout
+      - python/load-cache
+      - run: pip3 install -e .
+      - python/save-cache
+      - run:
+          command: leiaquilt example_input/view_0.jpg example_input/view_1.jpg
+          name: Create 2x1 image
+      - run:
+          command: leiaquilt example_input/view_0.jpg example_input/view_1.jpg example_input/view_2.jpg example_input/view_3.jpg
+          name: Create 2x2 image
+      - run:
+          command: leiaquilt example_input/*.jpg
+          name: Create 2x4 image
+
+workflows:
+  main:
+    jobs:
+      - build-and-test
