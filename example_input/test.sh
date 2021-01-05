@@ -1,0 +1,1 @@
+ffmpeg -f image2 -i "view_%d.jpg" -vf scale=531x299 video.gif
