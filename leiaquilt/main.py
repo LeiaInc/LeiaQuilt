@@ -9,7 +9,8 @@ from leiaquilt import layouts
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Given a set of images, aligns them and outputs a 2x1 or 2x2 image.')
+    parser = argparse.ArgumentParser(
+        description='Given a set of images, aligns them and outputs a 2x1 or 2x2 image.')
     parser.add_argument('filenames', metavar='N', type=str, nargs='+',
                         help='filenames to process (either 2 or 4)')
 
@@ -18,7 +19,8 @@ def main():
                                                                                "disable this")
     parser.set_defaults(align=True)
 
-    parser.add_argument('--convergence', dest='convergence', type=float, default=0)
+    parser.add_argument('--convergence', dest='convergence',
+                        type=float, default=0)
 
     args = parser.parse_args()
     filenames = args.filenames
@@ -51,7 +53,8 @@ def main():
 
         T = np.float32([[1, 0, this_x_shift], [0, 1, 0]])
 
-        ims[i] = cv2.warpAffine(ims[i], T, (ims[i].shape[1], ims[i].shape[0]), flags=cv2.INTER_LINEAR)
+        ims[i] = cv2.warpAffine(
+            ims[i], T, (ims[i].shape[1], ims[i].shape[0]), flags=cv2.INTER_LINEAR)
 
     os.makedirs('output', exist_ok=True)
     if len(ims) == 2:
