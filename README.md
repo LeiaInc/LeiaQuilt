@@ -1,5 +1,8 @@
 # LeiaQuilt
-Utility for aligning images into a 2x1 or 2x2
+Utility for aligning images into a 2x1 or 2x2 quilt.
+
+[![Circle CI](https://circleci.com/gh/LeiaInc/LeiaQuilt.svg?style=svg)](https://circleci.com/gh/LeiaInc/LeiaQuilt)
+
 
 ## Installation
 ```sh
@@ -22,7 +25,7 @@ leiaquilt example_input/view_0.jpg example_input/view_1.jpg example_input/view_2
 
 ![2x2](docs/out_2x2.jpg)
 
-## Advanced
+## Under The Hood
 
 Views captured by real cameras may not be well aligned.
 
